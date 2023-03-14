@@ -5,7 +5,7 @@ const images = [
     'img/03.webp',
     'img/04.webp',
     'img/05.webp',
-
+    
 
 ];
 
