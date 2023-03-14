@@ -1,0 +1,34 @@
+.wrapper{
+
+    height: 100vh;
+    width: 100%;
+}
+
+.gi-container{
+width: 1000px;
+height: 600px;
+
+}
+
+.debug{
+    border: 1px solid red;
+}
+
+.slide{
+height: 600px;
+width: 100%;
+}
+
+.slide img{
+max-width: 100%;
+
+}
+
+.gi-height{
+
+    height: 600px;
+}
+
+.slide-thumbanail{
+    height: calc(100% / 5);
+}
