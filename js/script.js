@@ -5,7 +5,7 @@ const images = [
     'img/03.webp',
     'img/04.webp',
     'img/05.webp',
-    
+
 
 ];
 
@@ -18,31 +18,30 @@ console.log(slider);
 let currentIndex = 0;
 let slides = '';
 
-for (let i=0; i < images.length; i++){
+for (let i = 0; i < images.length; i++) {
 
-slides+=   `
+    slides += `
 <div class="slide">
    <img src="${images[i]}" alt="videogame ${i}">
-</div>
-`;
+</div>`;
 
 }
 //console.log(slides)
 
-slider.innerHTML+=slides
+slider.innerHTML += slides
 
 document.querySelectorAll('.slide')[currentIndex].classList.add('active');
 
-const next= document.querySelector('.next');
-const prev= document.querySelector('.prev');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 
-next.addEventListener('click', nextImg );
+next.addEventListener('click', nextImg);
 
-function nextImg(){
+function nextImg() {
     document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
-    if (currentIndex=== images.length - 1){
+    if (currentIndex === images.length - 1) {
         currentIndex = 0;
-    }  else {
+    } else {
         currentIndex++;
     }
     document.querySelectorAll('.slide')[currentIndex].classList.add('active');
@@ -51,11 +50,11 @@ function nextImg(){
 
 prev.addEventListener('click', prevImg);
 
-function prevImg(){
+function prevImg() {
     document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
-    if (currentIndex=== 0){
+    if (currentIndex === 0) {
         currentIndex = images.length - 1;
-    }  else {
+    } else {
         currentIndex--;
     }
     document.querySelectorAll('.slide')[currentIndex].classList.add('active');
