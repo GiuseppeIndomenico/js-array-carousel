@@ -60,3 +60,20 @@ function prevImg() {
     document.querySelectorAll('.slide')[currentIndex].classList.add('active');
 
 }
+
+//autoplay carousel
+
+let autoslider;
+
+function startCarousel() {
+    autoslider = setInterval(nextImg, 2000);
+}
+
+function stopCarousel (){
+    clearInterval (autoslider);
+}
+
+slider.addEventListener('mouseover', stopCarousel);
+slider.addEventListener('mouseout', startCarousel);
+
+startCarousel()
